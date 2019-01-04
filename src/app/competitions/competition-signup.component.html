@@ -1,0 +1,115 @@
+
+
+<div>
+    <h1 class="header">Anmälan</h1>
+        <form 
+        [formGroup]="form"
+        (ngSubmit)="onSubmit(form.value)"
+        class="was-validated">
+        <div class="signUpForm">
+      <div class="top">
+            <div class="form-group">
+                    <label for="name">Namn:</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="namn" placeholder="Namn" formControlName="name" required>
+                    
+            </div>
+            <div class="form-group">
+                    <label for="personnr">Personnr:</label>
+                    <input type="text" class="form-control" id="personnr" aria-describedby="personnr" placeholder="Personnummer" formControlName="personnr" required>
+            </div>
+        </div>
+        <div class="top">
+            <div class="form-group">
+                    <label for="club">Klubb:</label>
+                    <input type="text" class="form-control" id="club" aria-describedby="club" placeholder="Klubb" formControlName="club" required>
+            </div>
+
+            <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="E-mail" formControlName="email">
+            </div>
+      </div>
+            <div class="dag">
+                <h2>Lördag den 9:e februari</h2>
+                    <div class="pass">
+                        <h3>Pass 1 - ca 09:00</h3>
+                        <div class="form-group">
+                        <select formControlName="pass1" class="form-control">
+                            <option [value]=0>Ingen klass vald</option>
+                            <option [value]="class.Id" *ngFor="let class of classes1"> 
+                            {{class.ClassName}}</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="pass">
+                        <h3>Pass 2 - ca 12:30</h3>
+                        <div class="form-group">
+                        <select formControlName="pass2" class="form-control">
+                                <option [value]=0>Ingen klass vald</option>
+                                <option [value]="class.Id" *ngFor="let class of classes2"> 
+                                {{class.ClassName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="pass">
+                        <h3>Pass 3 - ca 16:00</h3>
+                        <div class="form-group">
+                        <select formControlName="pass3" class="form-control">
+                                <option [value]=0>Ingen klass vald</option>
+                                <option [value]="class.Id" *ngFor="let class of classes3"> 
+                                {{class.ClassName}}</option>
+                            </select>
+                        </div>
+                        <div class="form-check">    
+                                <input type="checkbox" class="form-check-input" id="dubbel" (click)="handleChange()">
+                                <label class="form-check-label" for="exampleCheck1" (click)="clickedLabel()">Jag vill spela dubbel</label>
+                        </div>
+                        <div class="form-group">
+                                <input type="text" formControlName="comment" class="form-control" id="comment" aria-describedby="comment" placeholder="Dubbelpartner" disabled="disabled">
+                        </div>
+                    </div>
+            </div>
+            <div class="dag">
+                    <h2>Söndag den 10:e februari</h2>
+                        <div class="pass">
+                            <h3>Pass 1 - ca 09:00</h3>
+                            <div class="form-group">
+                            <select formControlName="pass5" class="form-control">
+                                <option [value]=0>Ingen klass vald</option>
+                                <option [value]="class.Id" *ngFor="let class of classes5"> 
+                                {{class.ClassName}}</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="pass">
+                            <h3>Pass 2 - ca 12:30</h3>
+                            <div class="form-group">
+                            <select formControlName="pass6" class="form-control">
+                                    <option [value]=0>Ingen klass vald</option>
+                                    <option [value]="class.Id" *ngFor="let class of classes6"> 
+                                    {{class.ClassName}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="space">
+                                <br><br><br><br><br>
+                        </div>
+                        
+                        <label [hidden]="form.valid" style="color:red;">Fyll i namn, klubb och personnr.</label>
+                        <button type="submit" [disabled]="!form.valid" class="btn btn-primary knapp">Skicka Anmälan</button>
+                        
+                        
+                </div>
+                <div class="dag">
+                        <label>Vid eventuella frågor eller problem med anmälningsförmuläret skicka ett mail till christofer.ryas@gmail.com.</label>
+                </div>
+
+</div>
+      </form>
+</div>
+
+<div class="confirm" id="confirm">
+    <div class="confirm-content">
+   <h1> {{signedUpPlayer}} är anmäld</h1>
+</div>
+</div>

@@ -1,0 +1,78 @@
+.confirm {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    width:100%;
+    height: 100vh;
+}
+
+.confirm-content {
+    
+        position: relative;
+        top: 40%;
+        width:100%;
+        text-align: center;
+        color: lime;
+}
+
+.header {
+
+    margin-left: 100px;
+}
+
+.dag {
+    padding: 10px;
+    margin: 10px;
+}
+
+.fill {
+    padding: 10px;
+    margin: 10px;
+}
+
+.knapp {
+    float:right;
+}
+
+
+.signUpForm {
+
+    width: 80%;
+    margin-bottom: 20px;
+    display: grid;  //Change to grid for small screens (flex)
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+}
+
+.top {
+    padding: 10px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 960px) {
+    .signUpForm {
+        grid-template-columns: none;
+        width: 95%;
+    }
+
+    .header {
+        width: 80%;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+    }
+    .knapp {
+        width: 100%;
+    }
+
+    .fill {
+        display: none;
+    }
+
+    .space {
+        display: none;
+    }
+
+}

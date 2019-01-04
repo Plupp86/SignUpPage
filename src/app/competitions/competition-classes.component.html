@@ -1,0 +1,94 @@
+<div class="signedUp">
+
+<h1>Lördag</h1>
+<h2>ca 09:00</h2>
+<div class="grid-container">
+    <div *ngFor="let class of classes1" class="klass">
+        <h4>
+        {{class.ClassName}}
+        </h4>
+    <ul>
+        <ng-container *ngFor="let player of players">
+            <li *ngIf="player.Classes.includes(class.Id)">
+                {{player.Name}} - {{player.Club}}
+            </li> 
+        </ng-container>
+    </ul>
+    </div>
+</div>
+<h2>ca 12:30</h2>
+<div class="grid-container">
+<div *ngFor="let class of classes2" class="klass">
+        <h4>
+            {{class.ClassName}}
+        </h4>
+        <ul>
+            <ng-container *ngFor="let player of players">
+                <li *ngIf="player.Classes.includes(class.Id)">
+                    {{player.Name}} - {{player.Club}}
+                </li> 
+            </ng-container>
+        </ul>
+    </div>
+</div>
+    <h2>ca 16:00</h2>
+    <div class="grid-container">
+            <div *ngFor="let class of classes3" class="klass">
+                    <h4>
+                        {{class.ClassName}}
+                    </h4>
+                    <ul>
+                        <ng-container *ngFor="let player of players">
+                            <li *ngIf="player.Classes.includes(class.Id)">
+                                {{player.Name}} - {{player.Club}}
+                            </li> 
+                        </ng-container>
+                    </ul>
+                </div>
+                <div *ngFor="let class of classes4" class="klass">
+                        <h4>
+                            {{class.ClassName}}
+                        </h4>
+                        <ul>
+                            <ng-container *ngFor="let player of players">
+                                <li *ngIf="player.Classes.includes(class.Id)">
+                                    {{player.Name}} - {{player.Club}}
+                                </li> 
+                            </ng-container>
+                        </ul>
+                    </div>
+    </div>
+    <h1>Söndag</h1>
+        <div class="grid-container">
+        <div>
+<h2>ca 09:00</h2>
+<div *ngFor="let class of classes5" class="klass">
+        <h4>
+            {{class.ClassName}}
+        </h4>
+        <ul>
+            <ng-container *ngFor="let player of players">
+                <li *ngIf="player.Classes.includes(class.Id)">
+                    {{player.Name}} - {{player.Club}}
+                </li> 
+            </ng-container>
+        </ul>
+</div>
+</div>
+<div>
+<h2>ca 12:30</h2>
+<div *ngFor="let class of classes6" class="klass">
+        <h4>
+            {{class.ClassName}}
+        </h4>
+        <ul>
+            <ng-container *ngFor="let player of players">
+                <li *ngIf="player.Classes.includes(class.Id)">
+                    {{player.Name}} - {{player.Club}}
+                </li> 
+            </ng-container>
+        </ul>
+</div>
+</div>
+</div>
+</div>

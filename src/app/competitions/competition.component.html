@@ -1,0 +1,16 @@
+<div class="compNav"> 
+<h1 class="header">
+   Umeå Nationella 2019
+</h1>
+<br><h4>
+        <a [routerLink]="[{ outlets: { competitionOutlet: ['program'] } }]" >Program</a> 
+        <a [routerLink]="[{ outlets: { competitionOutlet: ['signup'] } }]" >Anmälan</a> 
+        <a [routerLink]="[{ outlets: { competitionOutlet: ['viewclasses'] } }]" >Visa Anmälda</a> 
+        <a [routerLink]="[{ outlets: { competitionOutlet: ['clubs'] } }]" >Klubbar</a> 
+</h4>
+</div>
+<div class="main">
+<div class="component">
+<router-outlet name="competitionOutlet"></router-outlet>
+</div>
+</div>

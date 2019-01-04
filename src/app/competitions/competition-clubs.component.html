@@ -1,0 +1,21 @@
+<div class="signedUp">
+
+
+<h1>Spelare per klubb</h1>
+<div class="grid-container">
+<div *ngFor="let club of clubList" class="klubb">
+    <h3>{{club.ClubName}}</h3>
+    <ul>
+        <li *ngFor="let player of club.Players">
+            <b>{{player.PlayerName}}:</b>
+            <span *ngFor="let klass of player.Klasser">
+                {{klass}}, 
+            </span>
+        </li>
+    </ul>
+</div>
+</div>
+
+
+
+</div>
